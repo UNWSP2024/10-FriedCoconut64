@@ -1,10 +1,23 @@
-# Program #4 Employee Class:
-# Write a class Employee that holds the following data about an employee in attributes: name, ID number, department, and job title.
+class Employee:
+    def __init__(self, name, ID_number, department, job_title):
+        self.name = name
+        self.ID_number = ID_number
+        self.department = department
+        self.job_title = job_title
 
-# Once you have written the class, write a program that creates three Employee objects to hold the following data.
+    def get_info(self):
+        return self.name, self.ID_number, self.department, self.job_title
 
-# Name	ID Number	Department	Job Title
-# Susan Meyers	47899 	Accounting	Vice President
-# Mark Jones	39119	IT	Programmer
-# Joy Rogers	81774	Manufacturing	Engineer
-# The program should store the data in the three objects, then display the data for each employee on the screen.
+worker1 = Employee("Susan Meyers", "47899", "Accounting", "Vice President")
+worker2 = Employee("Mark Jones", "39119", "IT", "Programmer")
+worker3 = Employee("Joy Rogers", "81774", "Manufacturing", "Engineer")
+
+print("Name,", "ID Number,", "Department,", "Job Title")
+info1 = worker1.get_info()
+print(info1)
+info2 = worker2.get_info()
+print(info2)
+info3 = worker3.get_info()
+print(info3)
+
+# Program #4, Donovan Thompson 4/4/2025
